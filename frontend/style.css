@@ -1,0 +1,81 @@
+/* Apply a smooth font and reset some defaults */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #e1bee7);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.register-container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+.register-form h2 {
+  text-align: center;
+  color: #4a148c;
+  margin-bottom: 24px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #7b1fa2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(123, 31, 162, 0.3);
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: #7b1fa2;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #6a1b9a;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #6a1b9a;
+  text-decoration: none;
+  font-weight: bold;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freelance Connect | Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1s ease-in;
+      padding: 16px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-container {
+      background-color: #1e293b;
+      padding: 36px 32px;
+      border-radius: 16px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 400px;
+      animation: slideUp 0.6s ease;
+    }
+
+    @keyframes slideUp {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #22c55e;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      color: #f8fafc;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #475569;
+      background-color: #0f172a;
+      color: #f1f5f9;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #22c55e;
+      outline: none;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 12px;
+      background: #22c55e;
+      border: none;
+      color: #0f172a;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background: #16a34a;
+    }
+
+    .login-text {
+      margin-top: 20px;
+      text-align: center;
+      color: #cbd5e1;
+    }
+
+    .login-text a {
+      color: #22c55e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .login-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <form action="../backend/login.php" method="POST" class="login-form">
+      <h2>Login to Freelance Connect</h2>
+
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required />
+      </div>
+
+      <button type="submit" class="btn-submit">Login</button>
+
+      <p class="login-text">Don’t have an account? <a href="register.html">Register here</a></p>
+    </form>
+  </div>
+</body>
+</html>

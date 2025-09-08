@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Freelance Connect</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1f2937);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    .register-container {
+      background: #111827;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      max-width: 420px;
+      width: 100%;
+      color: white;
+      animation: popIn 0.5s ease;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #22c55e;
+    }
+
+    .input-group {
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #f3f4f6;
+    }
+
+    input, select {
+      padding: 12px;
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      font-size: 15px;
+      color: white;
+      transition: border 0.3s, background 0.3s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #22c55e;
+      background-color: #111827;
+    }
+
+    .btn-submit {
+      background: #22c55e;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn-submit:hover {
+      background: #16a34a;
+    }
+
+    .login-text {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .login-text a {
+      color: #22c55e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-text a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <form action="../backend/register.php" method="POST">
+      <h2>Join Freelance Connect</h2>
+
+      <div class="input-group">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required />
+      </div>
+
+      <div class="input-group">
+        <label for="role">Select Role</label>
+        <select name="role" id="role" required>
+          <option value="">-- Choose --</option>
+          <option value="client">Client</option>
+          <option value="freelancer">Freelancer</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-submit">Register</button>
+
+      <p class="login-text">Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </div>
+</body>
+</html>
